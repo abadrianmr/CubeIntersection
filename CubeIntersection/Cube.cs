@@ -82,7 +82,7 @@ namespace CubeIntersection
         }
 
         /// <summary>
-        /// Calculate the intersected volume of two cubes.
+        /// Calculate the intersected volume of two cubes. According to https://stackoverflow.com/questions/5556170/finding-shared-volume-of-two-overlapping-cuboids
         /// </summary>
         /// <param name="cube1"></param>
         /// <param name="cube2"></param>
