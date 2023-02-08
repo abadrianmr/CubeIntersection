@@ -5,15 +5,26 @@ namespace CubeIntersection.Tests
     [TestClass()]
     public class CubeTests
     {
+        /// <summary>
+        /// Test <see cref="Cube"/> constructors
+        /// </summary>
         [TestMethod()]
         public void CubeTest()
         {
             Assert.ThrowsException<ArgumentException>( () =>
             {
                 var cube1 = new Cube( 1, new Vector( 2 ) );
-            }, "The center of a cube must be a 3-dimensional vector." );           
+            }, "The center of a cube must be a 3-dimensional vector." );
+
+            Assert.ThrowsException<ArgumentException>( () =>
+            {
+                var cube1 = new Cube( -1, new Vector( 3 ) );
+            }, "The size must be a value grater than zero." );
         }
 
+        /// <summary>
+        /// Test <see cref="Cube.CollitionCheck(Cube, Cube)"/> method.
+        /// </summary>
         [TestMethod()]
         public void CollitionCheckTest()
         {
@@ -26,6 +37,9 @@ namespace CubeIntersection.Tests
             Assert.IsTrue( Cube.CollitionCheck( cube1, cube3 ) );
         }
 
+        /// <summary>
+        /// Test <see cref="Cube.IntersectedVolume(Cube, Cube)"/> method.
+        /// </summary>
         [TestMethod()]
         public void IntersectedVolumeTest()
         {

@@ -8,13 +8,40 @@ namespace CubeIntersection
     public class Cube
     {
         #region Properties
-
+        private double _size;
         /// <summary>
         /// Cube Size.
         /// </summary>
-        public double Size { get; set; }
-
-        public Vector Center { get; set; }        
+        public double Size
+        {
+            get
+            {
+                return _size;
+            }
+            set
+            {
+                if( value < 0 )
+                    throw new ArgumentException( "The size must be a value grater than zero." );
+                _size = value;
+            }
+        }
+        private Vector _center;
+        /// <summary>
+        /// s-dimensional vector <see cref="Vector"/> that represent the center of the cube.
+        /// </summary>
+        public Vector Center 
+        {
+            get
+            {
+                return _center;
+            }
+            set
+            {
+                if(value.Length != 3)
+                    throw new ArgumentException( "The center of a cube must be a 3-dimensional vector." );
+                _center = value;
+            } 
+        }        
 
         #endregion
 
@@ -22,12 +49,8 @@ namespace CubeIntersection
 
         public Cube( double size, Vector center )
         {
-            if( center.Length != 3 )
-                throw new ArgumentException( "The center of a cube must be a 3-dimensional vector." );
-
-
-            Size = size;
             Center = center;
+            Size = size;            
         }
 
         #endregion
