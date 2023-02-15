@@ -1,6 +1,6 @@
 ﻿using System.Numerics;
 
-namespace CubeIntersection
+namespace Mathematics
 {
     /// <summary>
     /// Models a vector of real numbers.

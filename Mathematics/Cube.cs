@@ -1,6 +1,6 @@
 ﻿
 
-namespace CubeIntersection
+namespace Mathematics
 {
     /// <summary>
     /// Models a cube.
