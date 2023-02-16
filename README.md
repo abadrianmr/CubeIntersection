@@ -8,8 +8,12 @@ Two classes were also defined to do the tests:
 1. VectorTests: to test the features of Vector
 2. CubeTests: to test the Cube functionalities
 
-#In order to show son deign patterns others projects were added
-1.Domain: in this project the entities were defined
-1.1. Builder pattern were implemented in orter to construct a Cube.
+# In order to show some design patterns others projects were added:
+
+1. Domain: in this project the entities were defined.
+
+1.1. Builder pattern were implemented in order to construct a Cube.
+
 2.Repository: Defines a repository to encapsulate the interaction with a posible database.
+
 3.WpfUI: WPF projects that use dependency inyection (Autofac) to register repositories interfaces and navigation services.
